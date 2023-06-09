@@ -1,0 +1,499 @@
+{
+	"info": {
+		"_postman_id": "70b760ee-dc51-4107-a77d-1b54b9f72a50",
+		"name": "E-Commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26521100"
+	},
+	"item": [
+		{
+			"name": "user collection",
+			"item": [
+				{
+					"name": "userSignup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userName",
+									"value": "Ruchii Sharma",
+									"type": "text"
+								},
+								{
+									"key": "userPassword",
+									"value": "ahnendnj67dF#",
+									"type": "text"
+								},
+								{
+									"key": "userEmail",
+									"value": "harsh2a99@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "userMobile",
+									"value": "1234567890",
+									"type": "text"
+								},
+								{
+									"key": "userCity",
+									"value": "Indore",
+									"type": "text"
+								},
+								{
+									"key": "userState",
+									"value": "MP",
+									"type": "text"
+								},
+								{
+									"key": "profilePic",
+									"type": "file",
+									"src": "/C:/Users/Sanjeev verma/Downloads/userPhoto.jpg"
+								},
+								{
+									"key": "userCountry",
+									"value": "India",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9999/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\":\"harsh2a99@gmail.com\",\r\n    \"userPassword\":\"ahnendnj67dF#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotPassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDY2MDdmYzhiNjhmNWM1N2IwMTRkODciLCJpYXQiOjE2ODQ0MDkzNTYsImV4cCI6MTY4NDg0MTM1Nn0.eGIhwiO2x3iCAM_D55JcZtSy17UhbHXJP5N24F0JOy8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userEmail\":\"hereharsha999@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/user/forgotpassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"user",
+								"forgotpassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\" : \"Abc@123\",\r\n    \"confirmPassword\":\"Abc@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/user/resetpassword/64661c097335b940db8ff9f7/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDY2MWMwOTczMzViOTQwZGI4ZmY5ZjciLCJ1c2VyRW1haWwiOiJoZXJlaGFyc2hhOTk5QGdtYWlsLmNvbSIsImlhdCI6MTY4NTQzMTQ5MiwiZXhwIjoxNjg1NDY3NDkyfQ.xgFEluKoWT4rt4i8PLsRJKzCou8jPWS_R8F4_92d6TE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"user",
+								"resetpassword",
+								"64661c097335b940db8ff9f7",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDY2MWMwOTczMzViOTQwZGI4ZmY5ZjciLCJ1c2VyRW1haWwiOiJoZXJlaGFyc2hhOTk5QGdtYWlsLmNvbSIsImlhdCI6MTY4NTQzMTQ5MiwiZXhwIjoxNjg1NDY3NDkyfQ.xgFEluKoWT4rt4i8PLsRJKzCou8jPWS_R8F4_92d6TE"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product collection",
+			"item": [
+				{
+					"name": "addProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\":\"t-shirt\",\r\n    \"productDescription\" : \"100% cotton\",\r\n    \"productCompany\": \"max\",\r\n    \"productCategory\": \"Men's wear\",\r\n    \"productPrice\" : 123\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/product/addproduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"product",
+								"addproduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewProductList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/product/listproduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"product",
+								"listproduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchByProductName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/product/searchproduct/uu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"product",
+								"searchproduct",
+								"uu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeproduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/product/removeproduct/6469063bd0cc736bb9f7ec8c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"product",
+								"removeproduct",
+								"6469063bd0cc736bb9f7ec8c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateproduct",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "productName",
+									"value": "toffee",
+									"type": "text"
+								},
+								{
+									"key": "productDescription",
+									"value": "toffee",
+									"type": "text"
+								},
+								{
+									"key": "productCompany",
+									"value": "Amul",
+									"type": "text"
+								},
+								{
+									"key": "productPrice",
+									"value": "28",
+									"type": "text"
+								},
+								{
+									"key": "productQuantity",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "productImg",
+									"type": "file",
+									"src": "/C:/Users/Sanjeev verma/Downloads/userPhoto.jpg"
+								},
+								{
+									"key": "productCategory",
+									"value": "sweets",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9999/product/updateproduct/6481ec5bb8c6b8efd6dabbac",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"product",
+								"updateproduct",
+								"6481ec5bb8c6b8efd6dabbac"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart collection",
+			"item": [
+				{
+					"name": "addProductInCart",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/cart/addcart/64661c097335b940db8ff9f7/6476274dafbe9438cb6bff2b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"cart",
+								"addcart",
+								"64661c097335b940db8ff9f7",
+								"6476274dafbe9438cb6bff2b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listcart",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "removecart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/cart/removecart/6469b90c94ac13a701760e5a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"cart",
+								"removecart",
+								"6469b90c94ac13a701760e5a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "review collection",
+			"item": [
+				{
+					"name": "addreview",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"productReview\":\"nice\",\r\n    \"product_description\":\"100% cotton\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/review/addreview/6475939af6fc7dccd10acf39/64772eb16c0d3989c9556596",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"review",
+								"addreview",
+								"6475939af6fc7dccd10acf39",
+								"64772eb16c0d3989c9556596"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listreview",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "removereview",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9999/review/removereview/6469c3d9611986d22a7a8d77",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"review",
+								"removereview",
+								"6469c3d9611986d22a7a8d77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatereview",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"productReview\":\"usefull i like the product 1345679\",\r\n        \"product_description\":\"usefull\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9999/review/updatereview/6469c1a0611986d22a7a8d74",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"review",
+								"updatereview",
+								"6469c1a0611986d22a7a8d74"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
